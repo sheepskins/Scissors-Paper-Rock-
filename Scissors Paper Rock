@@ -1,0 +1,35 @@
+def game():
+    Player_1 = input('player 1 - enter your name:')
+    Player_2 = input('player 2 - enter your name:')
+
+    P1_move = input(f'{Player_1}; scissors, paper or rock?:').lower()
+    P2_move = input(f'{Player_2}; scissors, paper or rock?:').lower()
+
+    if P1_move == P2_move:
+        print('its a tie')
+
+    elif P1_move == 'scissors':
+        if P2_move == 'paper':
+            print(f'{Player_1} wins!')
+        else:
+            print(f'{Player_2} wins!')
+
+    elif P1_move == 'paper':
+        if P2_move == 'rock':
+            print(f'{Player_1} wins!')
+        else:
+            print(f'{Player_2} wins!')
+
+    elif P1_move == 'rock':
+        if P2_move == 'scissors':
+            print(f'{Player_1} wins!')
+        else:
+            print(f'{Player_2} wins!')
+
+
+launch = 'Y'
+while launch == 'Y':
+    game()
+    launch = input('would you like to play again? Y/N:').upper()
+else: 
+    print('goodbye!')
